@@ -1,0 +1,145 @@
+/* KONTAK.CSS – Form kontak & validasi */
+
+/* Gaya umum mengikuti beranda */
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #fefefe;
+    color: #000000;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    margin: 0;
+    padding: 16px 0 8px;
+    text-align: center;
+    background-color: #f7ff12;
+    color: #000000;
+    border-bottom: 1px solid #000000;
+}
+
+header h1 {
+    margin: 0;
+}
+
+/* Header & nav */
+nav {
+    background-color: #f7ff12;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid #000000;
+}
+
+nav ul {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    list-style: none;
+}
+
+nav ul li {
+    margin: 0;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    padding: 8px 4px;
+    border-bottom: 2px solid transparent;
+    font-weight: bold;
+    transition: 0.3s ease;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+    color: #000000;
+    border-bottom: 2px solid #000000;
+}
+
+/* Nav responsif pada layar kecil */
+@media (max-width: 600px) {
+    nav ul {
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+}
+
+/* Container isi */
+.container {
+    max-width: 800px;
+    margin: 20px auto 40px;
+    padding: 0 20px;
+}
+
+/* Judul */
+h2 {
+    color: #000000;
+}
+
+/* Form kontak */
+form {
+    max-width: 600px;
+    margin: 20px auto;
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+form label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: bold;
+    color: #333;
+}
+
+form input[type="text"],
+form input[type="email"],
+form textarea,
+form select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #bbb;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    font-size: 1rem;
+}
+
+form input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+form button[type="submit"] {
+    background-color: #000000;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+form button[type="submit"]:hover {
+    background-color: #000000;
+}
+
+/* Pesan error */
+.error {
+    color: red;
+    font-size: 0.85rem;
+}
+
+/* Footer */
+footer {
+    background-color: #edf41a;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}

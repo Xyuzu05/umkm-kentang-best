@@ -1,0 +1,161 @@
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #fefefe;
+    color: #000000;
+    margin: 0;
+    padding: 0;
+}
+
+/* Navigasi di beranda (nav dengan logo) */
+nav {
+    background-color: #f7ff12;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid #000000;
+}
+
+.nav-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 100px;
+    width: auto;
+}
+
+.nav-menu {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    flex-grow: 0.75;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-menu li {
+    margin-right: 20px;
+}
+
+.nav-menu li a {
+    text-decoration: none;
+    color: white;
+    padding: 8px 4px;
+    border-bottom: 2px solid transparent;
+    font-weight: bold;
+    transition: 0.3s ease;
+}
+
+.nav-menu li a:hover,
+.nav-menu li a.active {
+    color: #000000;
+    border-bottom: 2px solid #000000;
+}
+
+/* Container umum */
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Hero section */
+.hero {
+    background: #e9e1cf;
+    padding: 60px 0;
+    text-align: center;
+}
+
+.hero h2 {
+    font-size: 2.2em;
+    margin-bottom: 10px;
+}
+
+/* Keunggulan & Testimoni */
+.keunggulan,
+.testimoni {
+    padding: 40px 0;
+}
+
+.keunggulan img {
+    max-width: 300px;
+    height: auto;
+    display: block;
+    margin: 10px auto 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgb(0 0 0 / 0.1);
+}
+
+/* List keunggulan */
+.fitur-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.fitur-list li {
+    margin-bottom: 10px;
+    background: #e8ebee;
+    padding: 10px;
+    border-radius: 6px;
+}
+
+/* Card testimoni */
+.card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    padding: 16px;
+    margin: 20px auto;
+    max-width: 600px;
+    text-align: center;
+}
+
+/* Grid kartu responsif (jika ada banyak kartu) */
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.cards .card {
+    flex: 1 1 calc(33.333% - 20px);
+    max-width: 320px;
+    margin: 0;
+}
+
+@media (max-width: 900px) {
+    .cards .card {
+        flex: 1 1 calc(50% - 20px);
+    }
+}
+
+@media (max-width: 600px) {
+    .cards .card {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+}
+
+/* Nav responsif pada layar kecil */
+@media (max-width: 600px) {
+    .nav-menu {
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+}
+
+/* Footer */
+footer {
+    background-color: #edf41a;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}

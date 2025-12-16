@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Profil UMKM - Kentang Goreng Kriuk</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css/custom.css">
+</head>
+<body>
+   <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center" href="index.html">
+        <img src="images/logo.png" alt="Logo Kentang Goreng Kriuk" class="me-2" />
+        <strong>Kentang Goreng Kriuk</strong>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="mainNavbar">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link" href="index.html">Beranda</a></li>
+          <li class="nav-item"><a class="nav-link" href="tentang.html">Tentang</a></li>
+          <li class="nav-item"><a class="nav-link" href="produk.html">Produk</a></li>
+          <li class="nav-item"><a class="nav-link" href="galeri.html">Galeri</a></li>
+          <li class="nav-item"><a class="nav-link active" href="kontak.html">Kontak</a></li>
+        </ul>
+        <a class="btn btn-brand ms-lg-3" href="produk.html">Pesan Sekarang</a>
+      </div>
+    </div>
+   </nav>
+
+   <main class="container py-5">
+    <div class="row g-4">
+      <div class="col-lg-7">
+        <div class="card shadow-sm border-0 h-100">
+          <div class="card-body">
+            <p class="badge text-bg-warning text-dark mb-2">Respons < 1 jam</p>
+            <h2 class="section-title">Hubungi Kami</h2>
+            <p class="small-muted">Isi formulir berikut untuk menghubungi tim Kentang Goreng Kriuk.</p>
+            <div class="alert alert-danger d-none" id="errorMsg" role="alert"></div>
+            <form id="formKontak" class="row g-3" action="javascript:void(0);" method="post">
+              <div class="col-md-6">
+                <label class="form-label" for="nama">Nama</label>
+                <input class="form-control" type="text" id="nama" name="nama" placeholder="Nama lengkap" />
+                <div class="text-danger small" id="errorNama"></div>
+              </div>
+              <div class="col-md-6">
+                <label class="form-label" for="email">Email</label>
+                <input class="form-control" type="email" id="email" name="email" placeholder="nama@email.com" />
+                <div class="text-danger small" id="errorEmail"></div>
+              </div>
+              <div class="col-12">
+                <label class="form-label" for="kategori">Kategori Pesan</label>
+                <select class="form-select" id="kategori" name="kategori">
+                  <option value="">-- Pilih Kategori --</option>
+                  <option value="Umum">Umum</option>
+                  <option value="Produk">Produk</option>
+                  <option value="Kerja Sama">Kerja Sama</option>
+                </select>
+                <div class="text-danger small" id="errorKategori"></div>
+              </div>
+              <div class="col-12">
+                <label class="form-label" for="pesan">Pesan</label>
+                <textarea class="form-control" id="pesan" name="pesan" rows="4" placeholder="Tulis pesan Anda"></textarea>
+                <div class="text-danger small" id="errorPesan"></div>
+              </div>
+              <div class="col-12">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="langganan" name="langganan" value="ya">
+                  <label class="form-check-label" for="langganan">Saya ingin menerima newsletter promo kentang goreng</label>
+                </div>
+              </div>
+              <div class="col-12 d-flex justify-content-between align-items-center">
+                <small class="text-muted">Pesan Anda akan dibalas lewat email.</small>
+                <button class="btn btn-brand" type="submit">Kirim Pesan</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-5">
+        <div class="card shadow-sm border-0 h-100">
+          <div class="card-body">
+            <h5 class="card-title">Info Kontak</h5>
+            <ul class="list-group list-group-flush mb-3">
+              <li class="list-group-item d-flex align-items-center">
+                <i class="bi bi-geo-alt text-danger me-3"></i>
+                <span>Jl. Pahlawan, No 3 Pekalogan</span>
+              </li>
+              <li class="list-group-item d-flex align-items-center">
+                <i class="bi bi-telephone text-success me-3"></i>
+                <span>0812-3456-7890</span>
+              </li>
+              <li class="list-group-item d-flex align-items-center">
+                <i class="bi bi-envelope text-info me-3"></i>
+                <span>kentangkriuk@gmail.com</span>
+              </li>
+            </ul>
+            <div class="alert alert-info mb-3" role="alert">
+              <i class="bi bi-clock-history me-2"></i> Senin - Sabtu (10.00 - 21.00)
+            </div>
+            <a class="btn btn-outline-dark w-100" href="https://instagram.com/kentanggorengkriuk" target="_blank" rel="noopener">
+              <i class="bi bi-instagram me-2"></i>@kentanggorengkriuk
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+   </main>
+
+   <footer class="py-4 bg-dark text-white">
+    <div class="container d-flex flex-wrap align-items-center justify-content-between">
+      <div>
+        <span class="footer-brand">Kentang Goreng Kriuk</span>
+        <p class="mb-0 small text-white-50">Renyahnya bikin nagih sejak 2015.</p>
+      </div>
+      <div class="d-flex gap-3">
+        <a href="https://instagram.com/kentanggorengkriuk" class="text-white text-decoration-none"><i class="bi bi-instagram"></i></a>
+        <a href="kontak.html" class="text-white text-decoration-none"><i class="bi bi-envelope"></i></a>
+      </div>
+      <small class="text-white-50">&copy; 2025 Kentang Goreng Kriuk.</small>
+    </div>
+   </footer>
+
+   <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+   <script type="module" src="js/form.js"></script>
+   <script type="module" src="js/newslatter.js"></script>
+   <script src="js/site-interactions.js"></script>
+</body>
+</html>
